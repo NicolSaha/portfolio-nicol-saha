@@ -1,0 +1,31 @@
+{
+    "name": "portfolio-delfware",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": " postcss ./assets/styles/tailwind.css -o ./assets/styles/index.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NicolSaha/portfolio-nicol-saha.git"
+    },
+    "keywords": [],
+    "author": "Nicol Saha",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/NicolSaha/portfolio-nicol-saha/issues"
+    },
+    "homepage": "https://github.com/NicolSaha/portfolio-nicol-saha#readme",
+    "dependencies": {
+        "@formspree/cli": "^0.9.5",
+        "@tailwindcss/typography": "^0.2.0",
+        "@tailwindcss/ui": "^0.6.2",
+        "autoprefixer": "^9.8.6",
+        "postcss-cli": "^8.0.0",
+        "postcss-import": "^12.0.1"
+    },
+    "devDependencies": {
+        "tailwindcss": "^1.8.10"
+    }
+}
