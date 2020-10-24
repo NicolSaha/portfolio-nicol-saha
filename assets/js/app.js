@@ -32,7 +32,7 @@ function modalBgLeave(){
 function modalContentLeave(){
     modalContent.classList.remove("opacity-100","ease-out", "duration-300");
     modalContent.classList.add("opacity-0", "duration-200", "hidden", "translate-y-4", "sm:translate-y-0", "sm:scale-95");
-    window.location.hash = "#SECTION_HOME";
+    window.location.hash = "#home";
 }
 
 goBackBtn.addEventListener("click", modalBgLeave);
