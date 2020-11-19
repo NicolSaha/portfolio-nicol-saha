@@ -122,7 +122,3 @@ AOS.init({
   duration: 1600,
   once: false,
 });
-
-function show() {
-  document.getElementsByTagName('html')[0].style.visibility = 'visible';
-}
