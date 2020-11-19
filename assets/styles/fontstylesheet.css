@@ -1,60 +1,78 @@
 @font-face {
-    font-family: 'masthinaregular';
-    src: url('masthina-webfont.woff2') format('woff2'),
-         url('masthina-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'masthinaregular';
+  src: url('masthina-webfont.woff2') format('woff2'),
+    url('masthina-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.handwritten{
-    font-family: 'masthinaregular';
-    color: #81837F;
+.handwritten {
+  font-family: 'masthinaregular';
+  color: #81837f;
 }
 
 .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.slider{
-    height: 100px;
-    padding-left:15px;
-    overflow: hidden;
+.slider {
+  height: 100px;
+  padding-left: 15px;
+  overflow: hidden;
 }
 
 .slider h2 {
-    height: 50px;
-    margin-bottom: 50px;
-    padding: 10px 15px;
-    text-align: center;
+  height: 50px;
+  margin-bottom: 50px;
+  padding: 10px 15px;
+  text-align: center;
 }
 
 .slider-text1 {
-    background: transparent;
-    animation: slide 7s linear infinite;
+  background: transparent;
+  animation: slide 7s linear infinite;
 }
 
 .slider-text2 {
-    background: transparent;
+  background: transparent;
 }
 
 .slider-text3 {
-    background: transparent;
+  background: transparent;
 }
 
 @keyframes slide {
-    0% {margin-top:-300px;}
-    5% {margin-top:-200px;}
-    33% {margin-top:-200px;}
-    38% {margin-top:-100px;}
-    66% {margin-top:-100px;}
-    71% {margin-top:0px;}
-    100% {margin-top:0px;}
+  0% {
+    margin-top: -300px;
+  }
+  5% {
+    margin-top: -200px;
+  }
+  33% {
+    margin-top: -200px;
+  }
+  38% {
+    margin-top: -100px;
+  }
+  66% {
+    margin-top: -100px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+html {
+  visibility: hidden;
 }
