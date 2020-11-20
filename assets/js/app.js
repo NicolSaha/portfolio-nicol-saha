@@ -1,9 +1,3 @@
-//LOADING
-window.addEventListener('load', (event) => {
-  const show = document.getElementById('show');
-  show.addClass('opacity-100');
-});
-
 //MOBILE MENU
 let mainMenu = document.getElementById('main-menu');
 let mobileMenu = document.getElementById('mobile-menu');
