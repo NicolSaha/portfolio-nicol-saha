@@ -6,11 +6,16 @@ mainMenu.addEventListener('click', function () {
   mobileMenu.classList.add('opacity-100', 'scale-100');
 });
 
-const exitMobileMenu = document.getElementById('exit-mobile-menu');
-exitMobileMenu.addEventListener('click', function () {
+function closeMobileMenu() {
   mobileMenu.classList.add('hidden', 'opacity-0', 'scale-95');
   mobileMenu.classList.remove('opacity-100', 'scale-100');
-});
+}
+
+const exitMobileMenu = document.getElementById('exit-mobile-menu');
+exitMobileMenu.addEventListener('click', closeMobileMenu);
+
+const mobileNavItem = document.querySelector('.mobile-nav-item');
+mobileNavItem.addEventListener('click', closeMobileMenu);
 
 //CONFIRMATION MODAL
 const modalBg = document.getElementById('modal_bg');
