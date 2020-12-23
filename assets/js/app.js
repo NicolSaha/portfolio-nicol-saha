@@ -124,7 +124,7 @@ AOS.init({
 });
 
 //TYPEWRITER
-const TxtRotate = function (el, toRotate, period) {
+let TxtRotate = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -135,8 +135,8 @@ const TxtRotate = function (el, toRotate, period) {
 };
 
 TxtRotate.prototype.tick = function () {
-  const i = this.loopNum % this.toRotate.length;
-  const fullTxt = this.toRotate[i];
+  let i = this.loopNum % this.toRotate.length;
+  let fullTxt = this.toRotate[i];
 
   if (this.isDeleting) {
     this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -147,7 +147,7 @@ TxtRotate.prototype.tick = function () {
   this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
   const that = this;
-  const delta = 300 - Math.random() * 100;
+  let delta = 300 - Math.random() * 100;
 
   if (this.isDeleting) {
     delta /= 2;
