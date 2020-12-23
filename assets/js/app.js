@@ -1,22 +1,22 @@
 //MOBILE MENU
-let mainMenu = document.getElementById('main-menu');
-let mobileMenu = document.getElementById('mobile-menu');
+const mainMenu = document.getElementById('main-menu');
+const mobileMenu = document.getElementById('mobile-menu');
 mainMenu.addEventListener('click', function () {
   mobileMenu.classList.remove('hidden', 'opacity-0', 'scale-95');
   mobileMenu.classList.add('opacity-100', 'scale-100');
 });
 
-let exitMobileMenu = document.getElementById('exit-mobile-menu');
+const exitMobileMenu = document.getElementById('exit-mobile-menu');
 exitMobileMenu.addEventListener('click', function () {
   mobileMenu.classList.add('hidden', 'opacity-0', 'scale-95');
   mobileMenu.classList.remove('opacity-100', 'scale-100');
 });
 
 //CONFIRMATION MODAL
-let modalBg = document.getElementById('modal_bg');
-let modalContent = document.getElementById('modal_content');
-let goBackBtn = document.getElementById('goback_btn');
-let contactBtn = document.getElementById('contact_btn');
+const modalBg = document.getElementById('modal_bg');
+const modalContent = document.getElementById('modal_content');
+const goBackBtn = document.getElementById('goback_btn');
+const contactBtn = document.getElementById('contact_btn');
 
 function modalBgEnter() {
   modalBg.classList.remove('opacity-0', 'hidden');
@@ -61,8 +61,8 @@ goBackBtn.addEventListener('click', modalContentLeave);
 
 //MAIL CONTACT FORM
 window.addEventListener('DOMContentLoaded', function () {
-  var form = document.getElementById('contact_form');
-  var status = document.getElementById('form_status');
+  const form = document.getElementById('contact_form');
+  let status = document.getElementById('form_status');
 
   function success() {
     form.reset();
@@ -96,13 +96,13 @@ window.addEventListener('DOMContentLoaded', function () {
 
   form.addEventListener('submit', function (ev) {
     ev.preventDefault();
-    var data = new FormData(form);
+    let data = new FormData(form);
     ajax(form.method, form.action, data, success, error);
   });
 });
 
 function ajax(method, url, data, success, error) {
-  var xhr = new XMLHttpRequest();
+  let xhr = new XMLHttpRequest();
   xhr.open(method, url);
   xhr.setRequestHeader('Accept', 'application/json');
   xhr.onreadystatechange = function () {
@@ -124,7 +124,7 @@ AOS.init({
 });
 
 //TYPEWRITER
-var TxtRotate = function (el, toRotate, period) {
+const TxtRotate = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -135,8 +135,8 @@ var TxtRotate = function (el, toRotate, period) {
 };
 
 TxtRotate.prototype.tick = function () {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
+  const i = this.loopNum % this.toRotate.length;
+  const fullTxt = this.toRotate[i];
 
   if (this.isDeleting) {
     this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -146,8 +146,8 @@ TxtRotate.prototype.tick = function () {
 
   this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
-  var that = this;
-  var delta = 300 - Math.random() * 100;
+  const that = this;
+  const delta = 300 - Math.random() * 100;
 
   if (this.isDeleting) {
     delta /= 2;
@@ -168,10 +168,10 @@ TxtRotate.prototype.tick = function () {
 };
 
 window.onload = function () {
-  var elements = document.getElementsByClassName('txt-rotate');
-  for (var i = 0; i < elements.length; i++) {
-    var toRotate = elements[i].getAttribute('data-rotate');
-    var period = elements[i].getAttribute('data-period');
+  const elements = document.getElementsByClassName('txt-rotate');
+  for (let i = 0; i < elements.length; i++) {
+    const toRotate = elements[i].getAttribute('data-rotate');
+    const period = elements[i].getAttribute('data-period');
     if (toRotate) {
       new TxtRotate(elements[i], JSON.parse(toRotate), period);
     }
